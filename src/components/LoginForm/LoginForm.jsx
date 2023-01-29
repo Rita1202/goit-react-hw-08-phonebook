@@ -44,7 +44,6 @@ export const LoginForm = () => {
           placeholder="E-mail"
           className={css.input}
         />
-
         <input
           onChange={event => onChangeHandler(event)}
           name="password"

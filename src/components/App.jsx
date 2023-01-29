@@ -1,5 +1,5 @@
 import '../index.css';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { selectIsFetchingCurrentUser } from 'redux/auth/auth-selector';
@@ -23,10 +23,19 @@ export const App = () => {
   return (
     <div className="main-wrapper">
       {!isFetchingCurrentUser && (
+        // <NativeRouter initialEntries={['/goit-react-hw-08-movies/login']}>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route
-              path="contacts"
+              path="/login"
+              element={
+                <PublicRoute restricted>
+                  <LoginPage />
+                </PublicRoute>
+              }
+            />
+            <Route
+              path="/contacts"
               element={
                 <PrivateRoute>
                   <ContactsPage />
@@ -34,7 +43,7 @@ export const App = () => {
               }
             />
             <Route
-              path="user"
+              path="/user"
               element={
                 <PrivateRoute>
                   <UserPage />
@@ -42,23 +51,17 @@ export const App = () => {
               }
             />
             <Route
-              path="register"
+              path="/register"
               element={
                 <PublicRoute restricted>
                   <RegistrationPage />
                 </PublicRoute>
               }
             />
-            <Route
-              path="login"
-              element={
-                <PublicRoute restricted>
-                  <LoginPage />
-                </PublicRoute>
-              }
-            />
+            <Route path="/" element={<Navigate to="/login" replace />} />
           </Route>
         </Routes>
+        // </NativeRouter>
       )}
     </div>
   );
