@@ -38,12 +38,12 @@ GitHub.
 The production version of the project will automatically be linted, built, and
 deployed to GitHub Pages, in the `gh-pages` branch, every time the `main` branch
 is updated. For example, after a direct push or an accepted pull request. To do
-this, you need to edit the `homepage` field in the `package.json` file,
+this, you need to edit the `ContactsPage` field in the `package.json` file,
 replacing `your_username` and `your_repo_name` with your own, and submit the
 changes to GitHub.
 
 ```json
-"homepage": "https://your_username.github.io/your_repo_name/"
+"ContactsPage": "https://your_username.github.io/your_repo_name/"
 ```
 
 Next, you need to go to the settings of the GitHub repository (`Settings` >
@@ -69,13 +69,13 @@ icon, and in the drop-down window, follow the link `Details`.
 ### Live page
 
 After some time, usually a couple of minutes, the live page can be viewed at the
-address specified in the edited `homepage` property. For example, here is a link
-to a live version for this repository
+address specified in the edited `ContactsPage` property. For example, here is a
+link to a live version for this repository
 [https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
 
 If a blank page opens, make sure there are no errors in the `Console` tab
 related to incorrect paths to the CSS and JS files of the project (**404**). You
-most likely have the wrong value for the `homepage` property in the
+most likely have the wrong value for the `ContactsPage` property in the
 `package.json` file.
 
 ### Routing

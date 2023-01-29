@@ -1,0 +1,64 @@
+.formLeftDecoration,
+.formRightDecoration {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  background: #ff621f;
+  border-radius: 20px;
+}
+
+.formLeftDecoration {
+  bottom: 60px;
+  left: -30px;
+}
+
+.formRightDecoration {
+  top: 60px;
+  right: -30px;
+}
+
+.formLeftDecoration:before,
+.formLeftDecoration:after,
+.formRightDecoration:before,
+.formRightDecoration:after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  border-radius: 30px;
+  background: rgb(250, 242, 224);
+}
+
+.formLeftDecoration:before {
+  top: -20px;
+}
+
+.formLeftDecoration:after {
+  top: 20px;
+  left: 10px;
+}
+
+.formRightDecoration:before {
+  top: -20px;
+  right: 0;
+}
+
+.formRightDecoration:after {
+  top: 20px;
+  right: 10px;
+}
+
+.circle {
+  position: absolute;
+  bottom: 80px;
+  left: -55px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgb(250, 242, 224);
+}
+
+.formInner {
+  padding: 50px;
+}

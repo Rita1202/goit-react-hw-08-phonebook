@@ -39,12 +39,12 @@ GitHub.
 La versión de producción del proyecto se verificará, compilará y desplegará
 automáticamente en GitHub Pages, en la rama `gh-pages`, cada vez que se
 actualice la rama `main`. Por ejemplo, después de un Push directo o de una
-Pool-request aceptada. Para ello, edita el campo `homepage` del archivo
+Pool-request aceptada. Para ello, edita el campo `ContactsPage` del archivo
 `package.json`, sustituyendo `your_username` y `your_repo_name` por los tuyos
 propios, y envía los cambios a GitHub.
 
 ```json
-"homepage": "https://your_username.github.io/your_repo_name/"
+"ContactsPage": "https://your_username.github.io/your_repo_name/"
 ```
 
 A continuación, ve a la configuración del repositorio de GitHub (`Settings` >
@@ -70,14 +70,14 @@ la ventana desplegable del enlace `Detalles`.
 ### Página activa
 
 Después de un tiempo, normalmente un par de minutos, la página real se puede ver
-en la dirección especificada en la propiedad `homepage`. Por ejemplo, aquí está
-el enlace a la versión activa de este repositorio
+en la dirección especificada en la propiedad `ContactsPage`. Por ejemplo, aquí
+está el enlace a la versión activa de este repositorio
 [https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
 
 Si se abre una página en blanco, asegúrate de que no haya errores en la pestaña
 `Console` relacionados con rutas incorrectas de archivos CSS y JS del proyecto
-(**404**). Probablemente tienes un valor incorrecto para la propiedad `homepage`
-en el archivo `package.json`.
+(**404**). Probablemente tienes un valor incorrecto para la propiedad
+`ContactsPage` en el archivo `package.json`.
 
 ### Enrutamiento
 

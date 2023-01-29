@@ -1,0 +1,24 @@
+.decor {
+  display: flex;
+  padding: 20px;
+  max-width: 400px;
+  margin: 50px auto 0;
+  background: rgb(250, 242, 224);
+  border-radius: 30px;
+}
+
+.button {
+  margin-top: 30px;
+  background: #5d29fa;
+  outline: none;
+  border: none;
+  color: rgb(250, 242, 224);
+  font-size: 14px;
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 20px;
+}

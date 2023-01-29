@@ -22,11 +22,14 @@ przycisk `"Create repository from template"`.
 
 ![Creating repo from a template step 2](./assets/template-step-2.png)
 
-Po utworzeniu repozytorium, należy przejść do jego ustawień w zakładce `Settings` > `Actions` > `General`, jak pokazano na rysunku.
+Po utworzeniu repozytorium, należy przejść do jego ustawień w zakładce
+`Settings` > `Actions` > `General`, jak pokazano na rysunku.
 
 ![Settings GitHub Actions permissions step 1](./assets/gh-actions-perm-1.png)
 
-Przescrolluj stronę do samego końca, w sekcji `«Workflow permissions»` wybierz opcję `«Read and write permissions»` i zaznacz pole w checkboksie. Jest to niezbędne do automatyzacji procesu deploymentu projektu.
+Przescrolluj stronę do samego końca, w sekcji `«Workflow permissions»` wybierz
+opcję `«Read and write permissions»` i zaznacz pole w checkboksie. Jest to
+niezbędne do automatyzacji procesu deploymentu projektu.
 
 ![Settings GitHub Actions permissions step 2](./assets/gh-actions-perm-2.png)
 
@@ -50,11 +53,11 @@ Produkcyjna wersja projektu będzie automatycznie poddana pracy lintera, budowan
 i deployowana na GitHub Pages, w gałęzi `gh-pages` za każdym razem, gdy
 aktualizuje się gałąź `main`, na przykład po bezpośrednim pushu lub przyjętym
 pull requeście. W tym celu należy w pliku `package.json` zredagować pole
-`homepage`, zamieniając `your_username` i `your_repo_name` na swoje nazwy i
+`ContactsPage`, zamieniając `your_username` i `your_repo_name` na swoje nazwy i
 wysłać zmiany do GitHub.
 
 ```json
-"homepage": "https://your_username.github.io/your_repo_name/"
+"ContactsPage": "https://your_username.github.io/your_repo_name/"
 ```
 
 Następnie należy przejść do ustawień repozytorium GitHub (`Settings` > `Pages`)
@@ -81,15 +84,15 @@ ikonkę i przejściu w wyskakującym oknie do odnośnika `Details`.
 ### Deployowana strona
 
 Po jakimś czasie, zazwyczaj kilku minut, zdeployowaną stronę będzie można
-zobaczyć pod adresem wskazanym w zredagowanej właściwości `homepage`. Tutaj na
-przykład znajduje się odnośnik do zdeployowanej strony w wersji dla tego
+zobaczyć pod adresem wskazanym w zredagowanej właściwości `ContactsPage`. Tutaj
+na przykład znajduje się odnośnik do zdeployowanej strony w wersji dla tego
 repozytorium
 [https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
 
 Jeżeli otwiera się pusta strona, upewnij się, że w zakładce `Console` nie ma
 błędów związanych z nieprawidłowymi ścieżkami do plików CSS i JS projektu
 (**404**). Najprawdopodobniej wprowadzona została niewłaściwa wartość
-właściwości `homepage` w pliku `package.json`.
+właściwości `ContactsPage` w pliku `package.json`.
 
 ### Trasowanie
 
