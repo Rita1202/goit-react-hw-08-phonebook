@@ -23,7 +23,6 @@ export const App = () => {
   return (
     <div className="main-wrapper">
       {!isFetchingCurrentUser && (
-        // <NativeRouter initialEntries={['/goit-react-hw-08-movies/login']}>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route
@@ -61,7 +60,6 @@ export const App = () => {
             <Route path="/" element={<Navigate to="/login" replace />} />
           </Route>
         </Routes>
-        // </NativeRouter>
       )}
     </div>
   );
