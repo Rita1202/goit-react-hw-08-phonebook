@@ -1,4 +1,4 @@
-/* @import-normalize; bring in normalize.css styles */
+@import-normalize; /* bring in normalize.css styles */
 
 body {
   margin: 0;
@@ -10,7 +10,7 @@ body {
   font-family: 'Fira Sans', sans-serif;
   background: #ff621f;
 }
-/* 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -156,4 +156,4 @@ input:-webkit-autofill:focus {
   margin: 50px auto 0;
   background: rgb(250, 242, 224);
   border-radius: 30px;
-} */
+}
