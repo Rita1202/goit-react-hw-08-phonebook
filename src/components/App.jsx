@@ -1,5 +1,5 @@
 import '../index.css';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { selectIsFetchingCurrentUser } from 'redux/auth/auth-selector';
@@ -57,7 +57,7 @@ export const App = () => {
                 </PublicRoute>
               }
             />
-            <Route path="/" element={<Navigate to="/login" replace />} />
+            {/* <Route path="/" element={<Navigate to="/login" replace />} /> */}
           </Route>
         </Routes>
       )}
