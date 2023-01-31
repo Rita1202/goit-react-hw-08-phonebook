@@ -10,7 +10,7 @@ import { LoginPage } from 'pages/LoginPage/LoginPage';
 import { UserPage } from 'pages/UserPage/UserPage';
 import { fetchCurrentUser } from 'redux/auth/auth-operations';
 import { PrivateRoute } from 'HOCs/PrivateRoute';
-import { PublicRoute } from 'HOCs/PublicRoute';
+import { RestrictedRoute } from 'HOCs/RestrictedRoute';
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -28,9 +28,9 @@ export const App = () => {
             <Route
               path="/login"
               element={
-                <PublicRoute restricted>
+                <RestrictedRoute restricted>
                   <LoginPage />
-                </PublicRoute>
+                </RestrictedRoute>
               }
             />
             <Route
@@ -52,9 +52,9 @@ export const App = () => {
             <Route
               path="/register"
               element={
-                <PublicRoute restricted>
+                <RestrictedRoute restricted>
                   <RegistrationPage />
-                </PublicRoute>
+                </RestrictedRoute>
               }
             />
             <Route path="/" element={<Navigate to="/login" replace />} />
