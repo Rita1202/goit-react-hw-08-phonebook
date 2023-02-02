@@ -12,6 +12,7 @@ const initialState = {
   isLoading: false,
   error: null,
   isFetchingCurrentUser: false,
+  isLoggedIn: false,
 };
 
 export const authSlice = createSlice({
@@ -24,18 +25,21 @@ export const authSlice = createSlice({
         state.isLoading = false;
         state.error = null;
         state.token = action.payload.token;
+        state.isLoggedIn = true;
       })
       .addCase(login.fulfilled, (state, action) => {
         state.user = action.payload.user;
         state.isLoading = false;
         state.error = null;
         state.token = action.payload.token;
+        state.isLoggedIn = true;
       })
       .addCase(logout.fulfilled, state => {
         state.user = { name: '', email: '' };
         state.isLoading = false;
         state.error = null;
         state.token = null;
+        state.isLoggedIn = false;
       })
       .addCase(fetchCurrentUser.pending, state => {
         state.isLoading = true;
@@ -46,6 +50,7 @@ export const authSlice = createSlice({
         state.isLoading = false;
         state.error = null;
         state.isFetchingCurrentUser = false;
+        state.isLoggedIn = true;
       })
       .addCase(fetchCurrentUser.rejected, state => {
         state.isLoading = false;
